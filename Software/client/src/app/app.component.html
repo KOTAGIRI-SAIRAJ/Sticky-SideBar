@@ -1,63 +1,66 @@
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <style>
-
-    * { box-sizing: border-box; }
-    body { margin: 20px; }
-    .nav {
-      width: 100%;
-      border: blue 2px solid;
-      height: 50px;
+    .active {
+      background-color: #66a3ff;
     }
+    .container { position:relative;}
+    .row {clear: both;}
 
-    .content {
-      float: right;
-      width: 600px;
-      border: 2px solid green;
+    .main-content{
+      display: block;
     }
-
-    .content p { margin: 10px 15px; }
-    .child-content p { margin: 10px 15px; }
-
-
-    .sidebar {
-      width: 300px;
-      float: left;
-      border: 2px solid orange;
-      height: 400px;
-      overflow: auto;
+    .sidebar-content{
+      display: block;
     }
-
-    .sidebar, .content {  margin-top: 20px; }
-
-    .fixed {  position: fixed; top: 0; }
+    @media only handheld,screen and (min-width : 0px) and  (max-width : 767px)	 {
+      html { min-width:100%; }
+      .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: aquamarine;
+        width: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+      }
+      .fontsize{
+        font-size: x-small;
+      }
+      .sidebarsize{
+        height:20%;
+      }
+      .content {
+        margin-top: 20px; top: 0;
+      }
+    }
+    @media only handheld,screen and (min-width : 768px) and (max-width : 2560px){
+      .sidebar{
+        position: fixed;
+        margin-left:0px;
+        width: 30%;
+      }
+      .sidebarsize{
+        margin-top: 20px;
+      }
+      .content {
+        margin-top: 20px; top: 0;
+      }
+    }
 
   </style>
+  <title>Sticky Side Bar</title>
 
-  <script>
-
-
-  </script>
 </head>
-<body>
-<div class ="nav">
-  <title>Sticky SideBar</title>
-  <h3>Sticky SideBar</h3>
+<body class="container">
+<div class="page-header nav active">
+  <h1>Header</h1>
 </div>
-<div class="container">
-  <div class="sidebar">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis diam sed risus aliquet, in vestibulum neque lacinia. Ut nec consequat dolor. Aenean venenatis justo nec sagittis lacinia. Quisque metus tortor, porta quis nulla sit amet, dictum facilisis orci. Quisque ipsum dui, feugiat a lorem venenatis, interdum porttitor lacus. Sed ac augue vitae tellus fringilla tincidunt. In id ultrices erat. Vestibulum ut suscipit massa, ac pulvinar erat. Duis in accumsan eros. Ut elementum accumsan libero consectetur scelerisque. Mauris ut turpis id nibh iaculis egestas eget ornare risus. Donec justo tellus, rutrum et euismod
-    </p>
-  </div>
-  <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis diam sed risus aliquet, in vestibulum neque lacinia. Ut nec consequat dolor. Aenean venenatis justo nec sagittis lacinia. Quisque metus tortor, porta quis nulla sit amet, dictum facilisis orci. Quisque ipsum dui, feugiat a lorem venenatis, interdum porttitor lacus. Sed ac augue vitae tellus fringilla tincidunt. In id ultrices erat. Vestibulum ut suscipit massa, ac pulvinar erat. Duis in accumsan eros. Ut elementum accumsan libero consectetur scelerisque. Mauris ut turpis id nibh iaculis egestas eget ornare risus. Donec justo tellus, rutrum et euismod eleifend, eleifend vel augue. Quisque vulputate mi ut ante aliquet, ut molestie orci rutrum. Donec molestie, mauris vitae accumsan venenatis, felis turpis tempor erat, sit amet euismod est dui vel libero. Nunc sed turpis nec ipsum tristique porta.
-      Ut viverra sollicitudin velit. Fusce ac ante ac nunc posuere tempus. Aenean aliquet lacus arcu, id tristique lacus tempor at. In vel enim dolor. Sed sed sem quam. Pellentesque scelerisque malesuada quam in tempus. Pellentesque commodo vestibulum varius. Suspendisse in sollicitudin magna. Aenean condimentum, quam non rhoncus hendrerit, augue augue cursus nulla, ut commodo dolor justo in orci. Vivamus auctor vitae dolor at porttitor. Praesent euismod pellentesque sollicitudin. Phasellus blandit adipiscing dictum. Etiam hendrerit scelerisque quam nec suscipit. Mauris elit orci, facilisis ut fermentum ac, consequat vel nisl.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis diam sed risus aliquet, in vestibulum neque lacinia. Ut nec consequat dolor. Aenean venenatis justo nec sagittis lacinia. Quisque metus tortor, porta quis nulla sit amet, dictum facilisis orci. Quisque ipsum dui, feugiat a lorem venenatis, interdum porttitor lacus. Sed ac augue vitae tellus fringilla tincidunt. In id ultrices erat. Vestibulum ut suscipit massa, ac pulvinar erat. Duis in accumsan eros. Ut elementum accumsan libero consectetur scelerisque. Mauris ut turpis id nibh iaculis egestas eget ornare risus. Donec justo tellus, rutrum et euismod eleifend, eleifend vel augue. Quisque vulputate mi ut ante aliquet, ut molestie orci rutrum. Donec molestie, mauris vitae accumsan venenatis, felis turpis tempor erat, sit amet euismod est dui vel libero. Nunc sed turpis nec ipsum tristique porta.
-      Ut viverra sollicitudin velit. Fusce ac ante ac nunc posuere tempus. Aenean aliquet lacus arcu, id tristique lacus tempor at. In vel enim dolor. Sed sed sem quam. Pellentesque scelerisque malesuada quam in tempus. Pellentesque commodo vestibulum varius. Suspendisse in sollicitudin magna. Aenean condimentum, quam non rhoncus hendrerit, augue augue cursus nulla, ut commodo dolor justo in orci. Vivamus auctor vitae dolor at porttitor. Praesent euismod pellentesque sollicitudin. Phasellus blandit adipiscing dictum. Etiam hendrerit scelerisque quam nec suscipit. Mauris elit orci, facilisis ut fermentum ac, consequat vel nisl.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis diam sed risus aliquet, in vestibulum neque lacinia. Ut nec consequat dolor. Aenean venenatis justo nec sagittis lacinia. Quisque metus tortor, porta quis nulla sit amet, dictum facilisis orci. Quisque ipsum dui, feugiat a lorem venenatis, interdum porttitor lacus. Sed ac augue vitae tellus fringilla tincidunt. In id ultrices erat. Vestibulum ut suscipit massa, ac pulvinar erat. Duis in accumsan eros. Ut elementum accumsan libero consectetur scelerisque. Mauris ut turpis id nibh iaculis egestas eget ornare risus. Donec justo tellus, rutrum et euismod eleifend, eleifend vel augue. Quisque vulputate mi ut ante aliquet, ut molestie orci rutrum. Donec molestie, mauris vitae accumsan venenatis, felis turpis tempor erat, sit amet euismod est dui vel libero. Nunc sed turpis nec ipsum tristique porta.
-      Ut viverra sollicitudin velit. Fusce ac ante ac nunc posuere tempus. Aenean aliquet lacus arcu, id tristique lacus tempor at. In vel enim dolor. Sed sed sem quam. Pellentesque scelerisque malesuada quam in tempus. Pellentesque commodo vestibulum varius. Suspendisse in sollicitudin magna. Aenean condimentum, quam non rhoncus hendrerit, augue augue cursus nulla, ut commodo dolor justo in orci. Vivamus auctor vitae dolor at porttitor. Praesent euismod pellentesque sollicitudin. Phasellus blandit adipiscing dictum. Etiam hendrerit scelerisque quam nec suscipit. Mauris elit orci, facilisis ut fermentum ac, consequat vel nisl.
-
-    </p>
+<nav class="row container">
+  <div class="col-sm-6 content main-content">
+    <h1><strong>Main Content</strong></h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis diam sed risus aliquet, in vestibulum neque lacinia. Ut nec consequat dolor. Aenean venenatis justo nec sagittis lacinia. Quisque metus tortor, porta quis nulla sit amet, dictum facilisis orci. Quisque ipsum dui, feugiat a lorem venenatis, interdum porttitor lacus. Sed ac augue vitae tellus fringilla tincidunt. In id ultrices erat. Vestibulum ut suscipit massa, ac pulvinar erat. Duis in accumsan eros. Ut elementum accumsan libero consectetur scelerisque. Mauris ut turpis id nibh iaculis egestas eget ornare risus. Donec justo tellus, rutrum et euismod eleifend, eleifend vel augue. Quisque vulputate mi ut ante aliquet, ut molestie orci rutrum. Donec molestie, mauris vitae accumsan venenatis, felis turpis tempor erat, sit amet euismod est dui vel libero. Nunc sed turpis nec ipsum tristique porta.
       Ut viverra sollicitudin velit. Fusce ac ante ac nunc posuere tempus. Aenean aliquet lacus arcu, id tristique lacus tempor at. In vel enim dolor. Sed sed sem quam. Pellentesque scelerisque malesuada quam in tempus. Pellentesque commodo vestibulum varius. Suspendisse in sollicitudin magna. Aenean condimentum, quam non rhoncus hendrerit, augue augue cursus nulla, ut commodo dolor justo in orci. Vivamus auctor vitae dolor at porttitor. Praesent euismod pellentesque sollicitudin. Phasellus blandit adipiscing dictum. Etiam hendrerit scelerisque quam nec suscipit. Mauris elit orci, facilisis ut fermentum ac, consequat vel nisl.
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis diam sed risus aliquet, in vestibulum neque lacinia. Ut nec consequat dolor. Aenean venenatis justo nec sagittis lacinia. Quisque metus tortor, porta quis nulla sit amet, dictum facilisis orci. Quisque ipsum dui, feugiat a lorem venenatis, interdum porttitor lacus. Sed ac augue vitae tellus fringilla tincidunt. In id ultrices erat. Vestibulum ut suscipit massa, ac pulvinar erat. Duis in accumsan eros. Ut elementum accumsan libero consectetur scelerisque. Mauris ut turpis id nibh iaculis egestas eget ornare risus. Donec justo tellus, rutrum et euismod eleifend, eleifend vel augue. Quisque vulputate mi ut ante aliquet, ut molestie orci rutrum. Donec molestie, mauris vitae accumsan venenatis, felis turpis tempor erat, sit amet euismod est dui vel libero. Nunc sed turpis nec ipsum tristique porta.
@@ -66,6 +69,14 @@
       Ut viverra sollicitudin velit. Fusce ac ante ac nunc posuere tempus. Aenean aliquet lacus arcu, id tristique lacus tempor at. In vel enim dolor. Sed sed sem quam. Pellentesque scelerisque malesuada quam in tempus. Pellentesque commodo vestibulum varius. Suspendisse in sollicitudin magna. Aenean condimentum, quam non rhoncus hendrerit, augue augue cursus nulla, ut commodo dolor justo in orci. Vivamus auctor vitae dolor at porttitor. Praesent euismod pellentesque sollicitudin. Phasellus blandit adipiscing dictum. Etiam hendrerit scelerisque quam nec suscipit. Mauris elit orci, facilisis ut fermentum ac, consequat vel nisl.
     </p>
   </div>
-</div>
+  <div class="col-sm-1"></div>
+  <div class="col-sm-5 sidebarsize">
+    <div class="sidebar sidebar-content">
+      <h1><strong>Side Bar</strong></h1>
+      <p class="fontsize">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis diam sed risus aliquet, in vestibulum neque lacinia. Ut nec consequat dolor. Aenean venenatis justo nec sagittis lacinia. Quisque metus tortor, porta quis nulla sit amet, dictum facilisis orci. Quisque ipsum dui, feugiat a lorem venenatis, interdum porttitor lacus.
+      </p>
+    </div>
+  </div>
+</nav>
 </body>
 </html>
